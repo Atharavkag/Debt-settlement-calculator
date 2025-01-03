@@ -77,4 +77,6 @@ The code is organized into the following functions:
 
 *   `tkinter`: For the graphical user interface (standard library).
 
-This README provides a comprehensive overview of the application, its features, usage, and code structure. It should help users understand and use the debt settlement calculator effectively. 👍
+![Problem Statement](https://github.com/Atharavkag/Debt-settlement-calculator/blob/main/src/code1.png)
+![Problem Statement](https://github.com/Atharavkag/Debt-settlement-calculator/blob/main/src/code2.png)
+
