@@ -25,17 +25,38 @@ You add transactions one by one using the "Add Transaction" button.
 
 **Example Input:**
 
-Let's say the following transactions occurred:
 
-*   Alice lent $100 to Bob.
-*   Alice lent $50 to Charlie.
-*   Bob lent $20 to Charlie.
+![Problem Statement](https://github.com/Atharavkag/Debt-settlement-calculator/blob/main/src/graph.png)
+
+The graph shows the following transactions:
+
+*   Pragy lends 500 to Murphy.
+*   Pragy lends 320 to John.
+*   Murphy lends 250 to John.
+*   John lends 200 to Pragy.
 
 In the application, you would enter these as follows:
 
-*   Borrower: `Bob`, Lender: `Alice`, Amount: `100`
-*   Borrower: `Charlie`, Lender: `Alice`, Amount: `50`
-*   Borrower: `Charlie`, Lender: `Bob`, Amount: `20`
+*   Borrower: `Murphy`, Lender: `Pragy`, Amount: `500`
+*   Borrower: `John`, Lender: `Pragy`, Amount: `320`
+*   Borrower: `Murphy`, Lender: `John`, Amount: `250`
+*   Borrower: `Pragy`, Lender: `John`, Amount: `200`
+
+**Explanation of the Example and Simplification:**
+
+The initial graph shows multiple debts between the three people. The goal of the debt settlement algorithm is to simplify these multiple debts into the fewest possible transactions to settle everyone up.
+
+*   **Initial Debts:**
+    *   Pragy is owed 200 by John.
+    *   Pragy lent out a total of 500 + 320 = 820
+    *   Murphy owes 500 to Pragy and is owed 250 by John, so Murphy's net debt is 500 - 250 = 250 owed to Pragy.
+    *   John owes 320 to Pragy, so John's net debt is 120 + 250 = 370 owed to Pragy.
+
+*   **Simplified Debts (as shown in the simplified graph):**
+    *   Murphy owes 250 to Pragy.
+    *   John owes 370 to Pragy.
+
+The algorithm calculates these net balances and then determines the most efficient way to settle them. In this case, the simplified graph shows the optimal settlement: Murphy directly pays 250 to Pragy, and John directly pays 370 to Pragy. These two transactions settle all debts.
 
 ## How to Run 🚀
 
